@@ -54,7 +54,7 @@
 
 <template>
    <!-- TODO: make use of the 'blog-post' component to display the blog posts -->
-    <blogPost v-for="post in posts" :subject="post.subject" 
+    <blogPost v-for="(post,index) in posts" :subject="post.subject" 
     :entry="post.entry" :mood="post.mood" :key="post.id">
     <button class="btn btn-primary" @click="deletePost(post.id)">Delete</button>
     </blogPost>
