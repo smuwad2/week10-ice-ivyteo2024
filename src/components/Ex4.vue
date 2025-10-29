@@ -19,7 +19,7 @@ import TaskTracker from './subcomponents/TaskTracker.vue';
                 this.deadline = ''
             },
             // TODO: Add a new method, to delete a task completed
-            delete(idx){
+            deletetask(idx){
                 this.taskList.splice(idx,1)
             }
         }
@@ -41,7 +41,7 @@ import TaskTracker from './subcomponents/TaskTracker.vue';
     <hr>
 
     <!-- TODO: Modify following code -->
-    <task-tracker v-for="(task,idx) in taskList" :task="task" :idx="idx" :key="idx"  @remove-task="delete">
+    <task-tracker v-for="(task,idx) in taskList" :task="task" :idx="idx" :key="idx"  @removeTask="deletetask">
 
     </task-tracker>
 
