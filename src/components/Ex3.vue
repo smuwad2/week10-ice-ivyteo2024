@@ -1,10 +1,6 @@
-<script setup>
-    // Import BlogPost component
+<script>
     import blogPost from './subcomponents/BlogPost2.vue'
 	import axios from 'axios'
-</script>
-
-<script>
     export default {
         data() {
             return {
@@ -59,7 +55,7 @@
 <template>
    <!-- TODO: make use of the 'blog-post' component to display the blog posts -->
     <blogPost v-for="post in posts" :subject="post.subject" 
-    :entry="post.entry" :mood="post.mood" >
+    :entry="post.entry" :mood="post.mood" :key="post.id">
     <button class="btn btn-primary" @click="deletePost(post.id)">Delete</button>
     </blogPost>
 </template>
